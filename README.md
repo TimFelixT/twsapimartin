@@ -14,3 +14,7 @@ ADX/DMI: DI+ und DI-
 Wenn diese beide Indizes sich kreuzen soll das notiert werden. Dabei wird der Index von gestern Abend mit dem von heute Abend verglichen.
 
 Um mit der TWS-API zu arbeiten benötigt man die API von interactivebrokers und die Trading Workstation(TWS)
+
+# TWS:
+Es müssen ein paar Optionen in der TWS gesetzt werden, das ist in diesem Tutorial beschrieben.
+https://youtu.be/raWA45D9L_A
