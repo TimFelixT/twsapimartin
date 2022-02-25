@@ -1,7 +1,4 @@
-# twsapimartin
-Trading Workstation für Martin
-
-# Paket in dem die Firmen enthalten sind:
+Paket in dem die Firmen enthalten sind:
 	- US Securities Snapshot and Futures Value Bundle
 Das ist ein Aktienpaket das Martin gekauft hat, um sich amerikanische Aktien anzuschauen. Bei allen Firmen sollen die Indizes DI+ und DI- abgefragt werden.
 Es gibt keine Liste online in der alle Firmen enthalten sind, dass könnte daran liegen das sich die Liste täglich ändert.
@@ -9,7 +6,7 @@ Vielleicht kann man die Liste online abfragen?
 
 
 
-# Index:
+Index:
 ADX/DMI: DI+ und DI-
 Wenn diese beide Indizes sich kreuzen soll das notiert werden. Dabei wird der Index von gestern Abend mit dem von heute Abend verglichen.
 
