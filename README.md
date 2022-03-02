@@ -7,7 +7,11 @@ Das ist ein Aktienpaket das Martin gekauft hat, um sich amerikanische Aktien anz
 Es gibt keine Liste online in der alle Firmen enthalten sind, dass könnte daran liegen das sich die Liste täglich ändert.
 Vielleicht kann man die Liste online abfragen?
 
+https://www.finanzen.net/index/dow_jones/werte
+https://www.finanzen.net/index/s&p_500/werte
+https://www.finanzen.net/index/nasdaq_100/werte
 
+Links zu Beispielen. Wenn man auf die Aktie klickt sieht man die Kürzel unter dem Kurz. Davor steht 'Symbol'.
 
 # Index:
 ADX/DMI: DI+ und DI-
