@@ -21,6 +21,8 @@ Wenn diese beide Indizes sich kreuzen soll das notiert werden. Dabei wird der In
 
 Um mit der TWS-API zu arbeiten benötigt man die API von interactivebrokers und die Trading Workstation(TWS)
 
+# Download Symbols:
+https://www.eoddata.com/symbols.aspx?AspxAutoDetectCookieSupport=1
 # TWS:
 Es müssen ein paar Optionen in der TWS gesetzt werden, das ist in diesem Tutorial beschrieben.
 https://youtu.be/raWA45D9L_A
