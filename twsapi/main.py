@@ -42,48 +42,51 @@ def run_loop():
     app.run()
 
 app = IBapi()
-app.connect("127.0.0.1", 7497, 0)
-
+app.connect("127.0.0.1", 7496, 1)
+#Start socket in thread
 api_thread = threading.Thread(target=run_loop, daemon=True)
 api_thread.start()
 
-time.sleep(1)
+time.sleep(1) #wait for connection est.
 
-var1_contract = Contract()
-var1_contract.symbol = 'TSLA'
-var1_contract.secType = 'STK'
-var1_contract.currency = 'USD'
-var1_contract.exchange = 'SMART'
+test_contract = Contract()
+test_contract.symbol = 'TSLA'
+test_contract.secType = 'STK'
+test_contract.currency = 'USD'
+test_contract.exchange = 'SMART'
 
-app.reqHistoricalData(1, var1_contract, '', '8 y', '1 day', 'OPTION_IMPLIED_VOLATILITY', 0, 1, False, [])
-app.reqHistoricalData(2, var1_contract, '', '8 y', '1 day', 'ASK', 0, 1, False, [])
-app.reqHistoricalData(3, var1_contract, '', '8 y', '1 day', 'HISTORICAL_VOLATILITY', 0, 1, False, [])
+#t = app.reqMktData(1, test_contract, "", False, False, [])
+
+app.reqMktData(1000, ContractSamples.USStockAtSmart(), "", False, False, [])
+#app.reqHistoricalData(2, var1_contract, '', '8 y', '1 day', 'ASK', 0, 1, False, [])
+#app.reqHistoricalData(3, var1_contract, '', '8 y', '1 day', 'HISTORICAL_VOLATILITY', 0, 1, False, [])
 
 time.sleep(5)
 
-import pandas
+app.disconnect()
+#import pandas
 
-df = pandas.DataFrame(app.impliedVola, columns=['DataTime', 'Implied Vola'])
-dfHistVola = pandas.DataFrame(app.histVola, columns=['DataTime', 'Hist Vola'])
-dfAsk = pandas.DataFrame(app.ask, columns=['DataTime', 'Ask'])
+#df = pandas.DataFrame(app.impliedVola, columns=['DataTime', 'Implied Vola'])
+#dfHistVola = pandas.DataFrame(app.histVola, columns=['DataTime', 'Hist Vola'])
+#dfAsk = pandas.DataFrame(app.ask, columns=['DataTime', 'Ask'])
 
-df['Hist Vola']=dfHistVola['Hist Vola']
-df['Ask']=dfAsk['Ask']
+#df['Hist Vola']=dfHistVola['Hist Vola']
+#df['Ask']=dfAsk['Ask']
 
-df.head(10)
+#df.head(10)
 
-df.plot()
-plt.show()
+#df.plot()
+#plt.show()
 
-df.to_csv('data.csv')
+#df.to_csv('data.csv')
 
-print(df)
+#print(df)
 
 
 def main():
-    '''app = TestApp()
+    app = TestApp()
 
-    app.connect("127.0.0.1", 7497, 0)
+    app.connect("127.0.0.1", 7496, 1224)
 
     contract = Contract()
     contract.symbol = "AAPL"
@@ -95,8 +98,10 @@ def main():
     app.reqMarketDataType(4)  # switch to delayed-frozen data if live is not available
     app.reqMktData(1, contract, "", False, False, [])
 
-    app.run()'''
+    app.run()
 
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    pass
+    #main()
+    #test_main()
